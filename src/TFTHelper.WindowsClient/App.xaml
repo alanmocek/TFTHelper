@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:TFTHelper.WindowsClient"
              xmlns:views="clr-namespace:TFTHelper.WindowsClient.Views"
              xmlns:viewModels="clr-namespace:TFTHelper.WindowsClient.ViewModels"
-             StartupUri="MainWindow.xaml">
+             StartupUri="Views/MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             

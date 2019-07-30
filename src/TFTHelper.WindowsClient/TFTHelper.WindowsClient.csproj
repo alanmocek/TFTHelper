@@ -7,7 +7,7 @@
     <ProjectGuid>{5EDECC4D-5677-419C-8EAB-7C8C0DE32E55}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>TFTHelper.WindowsClient</RootNamespace>
-    <AssemblyName>TFTHelper.WindowsClient</AssemblyName>
+    <AssemblyName>TFTHelper</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -62,19 +62,19 @@
     <Compile Include="ViewModels\PrimaryViewViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
-    <Compile Include="Views\ClassesView.xaml.cs">
+    <Compile Include="Views\PrimaryViewViews\ClassesView.xaml.cs">
       <DependentUpon>ClassesView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ItemsView.xaml.cs">
+    <Compile Include="Views\PrimaryViewViews\ItemsView.xaml.cs">
       <DependentUpon>ItemsView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\OriginsView.xaml.cs">
+    <Compile Include="Views\PrimaryViewViews\OriginsView.xaml.cs">
       <DependentUpon>OriginsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PrimaryView.xaml.cs">
       <DependentUpon>PrimaryView.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -82,19 +82,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\ClassesView.xaml">
+    <Page Include="Views\PrimaryViewViews\ClassesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ItemsView.xaml">
+    <Page Include="Views\PrimaryViewViews\ItemsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\OriginsView.xaml">
+    <Page Include="Views\PrimaryViewViews\OriginsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -138,6 +138,53 @@
       <Project>{f2e6ca3d-d44c-4639-8aff-6778f3c08ba0}</Project>
       <Name>TFTHelper.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\Images\Items\bfsword.png" />
+    <Resource Include="Resources\Images\Items\bladeoftheruinedking.png" />
+    <Resource Include="Resources\Images\Items\bloodthirster.png" />
+    <Resource Include="Resources\Images\Items\chainvest.png" />
+    <Resource Include="Resources\Images\Items\cursedblade.png" />
+    <Resource Include="Resources\Images\Items\darkin.png" />
+    <Resource Include="Resources\Images\Items\dragonsclaw.png" />
+    <Resource Include="Resources\Images\Items\forceofnature.png" />
+    <Resource Include="Resources\Images\Items\frozenheart.png" />
+    <Resource Include="Resources\Images\Items\frozenmallet.png" />
+    <Resource Include="Resources\Images\Items\giantsbelt.png" />
+    <Resource Include="Resources\Images\Items\guardianangel.png" />
+    <Resource Include="Resources\Images\Items\guinsoosrageblade.png" />
+    <Resource Include="Resources\Images\Items\hextechgunblade.png" />
+    <Resource Include="Resources\Images\Items\hush.png" />
+    <Resource Include="Resources\Images\Items\infinityedge.png" />
+    <Resource Include="Resources\Images\Items\ionicspark.png" />
+    <Resource Include="Resources\Images\Items\knightsvow.png" />
+    <Resource Include="Resources\Images\Items\locketoftheironsolari.png" />
+    <Resource Include="Resources\Images\Items\ludensecho.png" />
+    <Resource Include="Resources\Images\Items\morellonomicon.png" />
+    <Resource Include="Resources\Images\Items\needlesslylargerod.png" />
+    <Resource Include="Resources\Images\Items\negatroncloak.png" />
+    <Resource Include="Resources\Images\Items\phantomdancer.png" />
+    <Resource Include="Resources\Images\Items\rabadonsdeathcap.png" />
+    <Resource Include="Resources\Images\Items\rapidfirecannon.png" />
+    <Resource Include="Resources\Images\Items\recurvebow.png" />
+    <Resource Include="Resources\Images\Items\redbuff.png" />
+    <Resource Include="Resources\Images\Items\redemption.png" />
+    <Resource Include="Resources\Images\Items\runaanshurricane.png" />
+    <Resource Include="Resources\Images\Items\seraphsembrace.png" />
+    <Resource Include="Resources\Images\Items\spatula.png" />
+    <Resource Include="Resources\Images\Items\spearofshojin.png" />
+    <Resource Include="Resources\Images\Items\statikkshiv.png" />
+    <Resource Include="Resources\Images\Items\swordbreaker.png" />
+    <Resource Include="Resources\Images\Items\swordofthedivine.png" />
+    <Resource Include="Resources\Images\Items\tearofthegoddess.png" />
+    <Resource Include="Resources\Images\Items\thornmail.png" />
+    <Resource Include="Resources\Images\Items\titanichydra.png" />
+    <Resource Include="Resources\Images\Items\warmogsarmor.png" />
+    <Resource Include="Resources\Images\Items\youmuusghostblade.png" />
+    <Resource Include="Resources\Images\Items\yuumi.png" />
+    <Resource Include="Resources\Images\Items\zekesherald.png" />
+    <Resource Include="Resources\Images\Items\zephyr.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

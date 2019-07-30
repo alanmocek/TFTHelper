@@ -8,5 +8,6 @@ namespace TFTHelper.Application.Services.OriginsServices
     public interface IOriginService
     {
         ICollection<Origin> GetOrigins();
+        ICollection<Origin> GetOriginsByName(string name);
     }
 }

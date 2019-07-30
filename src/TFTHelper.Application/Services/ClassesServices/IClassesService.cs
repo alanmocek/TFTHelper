@@ -8,5 +8,7 @@ namespace TFTHelper.Application.Services.ClassesServices
     public interface IClassesService
     {
         ICollection<Class> GetClasses();
+
+        ICollection<Class> GetClassesByName(string name);
     }
 }

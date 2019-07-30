@@ -6,7 +6,7 @@ namespace TFTHelper.Domain.Champions
 {
     public class ClassBonus
     {
-        public int ChampionCount { get; set; }
+        public int Needed { get; set; }
         public string Bonus { get; set; }
     }
 }

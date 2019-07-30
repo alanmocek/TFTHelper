@@ -7,7 +7,22 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="400">
     <Grid Background="White">
-        <ScrollViewer>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="36"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="36"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" Text="{Binding SearchName}" VerticalContentAlignment="Center" Padding="4,0"/>
+            <Button Grid.Column="1" Content="Search" Command="{Binding SearchOriginsByNameCommand}"/>
+        </Grid>
+
+        <ScrollViewer Grid.Row="1">
             <ItemsControl ItemsSource="{Binding Origins}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -19,7 +34,17 @@
                     <DataTemplate>
                         <StackPanel Margin="8">
                             <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
-                            <TextBlock Text="{Binding Description}" TextWrapping="Wrap" Margin="4"/>
+                            <TextBlock Text="{Binding Description}" TextWrapping="Wrap" Margin="4">
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock">
+                                        <Style.Triggers>
+                                            <Trigger Property="Text" Value="">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
                             <ItemsControl ItemsSource="{Binding Bonuses}">
                                 <ItemsControl.ItemsPanel>
                                     <ItemsPanelTemplate>
@@ -29,10 +54,14 @@
 
                                 <ItemsControl.ItemTemplate>
                                     <DataTemplate>
-                                        <StackPanel Orientation="Horizontal" Margin="8,0">
-                                            <TextBlock Text="{Binding ChampionCount}" Margin="0,0,4,0"/>
-                                            <TextBlock Text="{Binding Bonus}" Margin="4,0,0,0"/>
-                                        </StackPanel>
+                                        <TextBlock TextWrapping="Wrap" Margin="8,4" FontWeight="Medium">
+                                            <TextBlock.Text>
+                                                <MultiBinding StringFormat="{}({0}) {1}">
+                                                    <Binding Path="Needed"/>
+                                                    <Binding Path="Bonus"/>
+                                                </MultiBinding>
+                                            </TextBlock.Text>
+                                        </TextBlock>
                                     </DataTemplate>
                                 </ItemsControl.ItemTemplate>
                             </ItemsControl>

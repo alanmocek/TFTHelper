@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TFTHelper.WindowsClient.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="400">
     <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="36"/>
@@ -17,11 +17,13 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="36"/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="0" Content="Itemy" Command="{Binding ChangeViewCommand}" CommandParameter="items"/>
-            <Button Grid.Column="1" Content="Klasy" Command="{Binding ChangeViewCommand}" CommandParameter="classes"/>
-            <Button Grid.Column="2" Content="Typy" Command="{Binding ChangeViewCommand}" CommandParameter="origins"/>
+            <Button Grid.Column="0" Content="Items" Command="{Binding ChangeViewCommand}" CommandParameter="items"/>
+            <Button Grid.Column="1" Content="Classes" Command="{Binding ChangeViewCommand}" CommandParameter="classes"/>
+            <Button Grid.Column="2" Content="Origins" Command="{Binding ChangeViewCommand}" CommandParameter="origins"/>
+            <Button Grid.Column="3" Content="Update" />
         </Grid>
 
         <ContentPresenter Grid.Row="1" Content="{Binding CurrentViewModel}"/>
