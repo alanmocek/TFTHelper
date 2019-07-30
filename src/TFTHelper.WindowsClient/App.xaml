@@ -1,0 +1,32 @@
+﻿<Application x:Class="TFTHelper.WindowsClient.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TFTHelper.WindowsClient"
+             xmlns:views="clr-namespace:TFTHelper.WindowsClient.Views"
+             xmlns:viewModels="clr-namespace:TFTHelper.WindowsClient.ViewModels"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            
+            <!-- Main Window -->  
+            <DataTemplate DataType="{x:Type viewModels:PrimaryViewViewModel}">
+                <views:PrimaryView/>
+            </DataTemplate>
+
+            
+            <!-- Primary View -->
+            <DataTemplate DataType="{x:Type viewModels:ClassesViewViewModel}">
+                <views:ClassesView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewModels:ItemsViewViewModel}">
+                <views:ItemsView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModels:OriginsViewViewModel}">
+                <views:OriginsView/>
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
