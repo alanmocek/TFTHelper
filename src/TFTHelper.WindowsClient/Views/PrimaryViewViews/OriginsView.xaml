@@ -19,7 +19,7 @@
                 <ColumnDefinition Width="36"/>
             </Grid.ColumnDefinitions>
             <TextBox Grid.Column="0" Text="{Binding SearchName}" VerticalContentAlignment="Center" Padding="4,0"/>
-            <Button Grid.Column="1" Content="Search" Command="{Binding SearchOriginsByNameCommand}"/>
+            <Button Grid.Column="1" Content="S" Command="{Binding SearchOriginsByNameCommand}" ToolTip="Search"/>
         </Grid>
 
         <ScrollViewer Grid.Row="1">

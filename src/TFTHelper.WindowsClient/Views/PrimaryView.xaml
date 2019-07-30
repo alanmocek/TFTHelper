@@ -23,7 +23,7 @@
             <Button Grid.Column="0" Content="Items" Command="{Binding ChangeViewCommand}" CommandParameter="items"/>
             <Button Grid.Column="1" Content="Classes" Command="{Binding ChangeViewCommand}" CommandParameter="classes"/>
             <Button Grid.Column="2" Content="Origins" Command="{Binding ChangeViewCommand}" CommandParameter="origins"/>
-            <Button Grid.Column="3" Content="Update" />
+            <Button Grid.Column="3" Content="U" ToolTip="Update"/>
         </Grid>
 
         <ContentPresenter Grid.Row="1" Content="{Binding CurrentViewModel}"/>

@@ -6,7 +6,56 @@
              xmlns:local="clr-namespace:TFTHelper.WindowsClient.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="400">
-    <Grid Background="White">
-            
+    <Grid Background="White" Name="root">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <ItemsControl ItemsSource="{Binding BasicItems}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Margin="4"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button Margin="4" Height="40" Width="40" Command="{Binding Path= DataContext.ChangeItemSelectionCommand, ElementName=root}" CommandParameter="{Binding}">
+                            <Image Source="{Binding ImagePath}"/>
+                        </Button>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
+
+        <ScrollViewer Grid.Row="1">
+            <!--
+            <ItemsControl ItemsSource="{Binding Items}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="4">
+                            <StackPanel Orientation="Vertical">
+                                <Image Width="24" Height="24" Source="{Binding ImagePath}"/>
+                                <TextBlock Text="{Binding Name}" TextWrapping="Wrap" FontWeight="Bold"/>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            -->
+
+            <ItemsControl>
+                <Grid Height="32" Width="32">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="/Resources/Images/Items/bfsword.png"/>
+                </Grid>
+            </ItemsControl>
+        </ScrollViewer>
     </Grid>
 </UserControl>
