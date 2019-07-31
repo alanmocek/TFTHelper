@@ -24,56 +24,64 @@ namespace TFTHelper.Application.Services.ItemsServices
                     Key = "bfsword",
                     Name = "B.F. Sword",
                     Bonus = "+20 Attack Damage.",
-                    IsBasic = true
+                    IsBasic = true,
+                    Order = 1
                 },
                 new Item()
                 {
                     Key = "needlesslylargerod",
                     Name = "Needlessly Large Rod",
                     Bonus = "+20% Spell Damage.",
-                    IsBasic = true
+                    IsBasic = true,
+                    Order = 2
                 },
                 new Item()
                 {
                     Key = "recurvebow",
                     Name = "Recurve Bow",
                     Bonus = "+20% Attack Speed.",
-                    IsBasic = true
+                    IsBasic = true,
+                    Order = 3
                 },
                 new Item()
                 {
                     Key = "tearofthegoddess",
                     Name = "Tear of the Goddess",
                     Bonus = "+20 Starting Mana.",
-                    IsBasic = true
+                    IsBasic = true,
+                    Order = 4
                 },
                 new Item()
                 {
                     Key = "chainvest",
                     Name = "Chain Vest",
                     Bonus = "+20 Armor.",
-                    IsBasic = true
+                    IsBasic = true,
+                    Order = 5
                 },
                 new Item()
                 {
                     Key = "negatroncloak",
                     Name = "Negatron Cloak",
                     Bonus = "+20 Magic Resist.",
-                    IsBasic = true
+                    IsBasic = true,
+                    Order = 6
                 },
                 new Item()
                 {
                     Key = "giantsbelt",
                     Name = "Giant's Bell",
                     Bonus = "+200 Health.",
-                    IsBasic = true
+                    IsBasic = true,
+                    Order = 7
                 },
                 new Item()
                 {
                     Key = "spatula",
                     Name = "Spatula",
                     Bonus = "It must do something...",
-                    IsBasic = true
+                    IsBasic = true,
+                    Order = 8
                 },
                 new Item()
                 {
@@ -368,18 +376,313 @@ namespace TFTHelper.Application.Services.ItemsServices
                 },
                 new Recipe()
                 {
-                    AdditionalItem = GetItemByKey("spatula"),
-                    ResultItem = GetItemByKey("youmuusghostblade")
+                    AdditionalItem = GetItemByKey("needlesslylargerod"),
+                    ResultItem = GetItemByKey("hextechgunblade")
+                }
+            }.OrderBy(r => r.AdditionalItem.Order).ToList();
+
+
+            GetItemByKey("recurvebow").Recipes = new List<Recipe>()
+            {
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("bfsword"),
+                    ResultItem = GetItemByKey("swordofthedivine")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("recurvebow"),
+                    ResultItem = GetItemByKey("rapidfirecannon")
                 },
                 new Recipe()
                 {
                     AdditionalItem = GetItemByKey("needlesslylargerod"),
+                    ResultItem = GetItemByKey("guinsoosrageblade")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("tearofthegoddess"),
+                    ResultItem = GetItemByKey("statikkshiv")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("chainvest"),
+                    ResultItem = GetItemByKey("phantomdancer")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("negatroncloak"),
+                    ResultItem = GetItemByKey("cursedblade")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("giantsbelt"),
+                    ResultItem = GetItemByKey("titanichydra")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("spatula"),
+                    ResultItem = GetItemByKey("bladeoftheruinedking")
+                }
+            };
+
+            GetItemByKey("chainvest").Recipes = new List<Recipe>()
+            {
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("bfsword"),
+                    ResultItem = GetItemByKey("guardianangel")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("recurvebow"),
+                    ResultItem = GetItemByKey("phantomdancer")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("needlesslylargerod"),
+                    ResultItem = GetItemByKey("locketoftheironsolari")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("tearofthegoddess"),
+                    ResultItem = GetItemByKey("frozenheart")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("chainvest"),
+                    ResultItem = GetItemByKey("thornmail")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("negatroncloak"),
+                    ResultItem = GetItemByKey("swordbreaker")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("giantsbelt"),
+                    ResultItem = GetItemByKey("redbuff")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("spatula"),
+                    ResultItem = GetItemByKey("knightsvow")
+                }
+            };
+
+            GetItemByKey("negatroncloak").Recipes = new List<Recipe>()
+            {
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("bfsword"),
+                    ResultItem = GetItemByKey("bloodthirster")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("recurvebow"),
+                    ResultItem = GetItemByKey("cursedblade")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("needlesslylargerod"),
+                    ResultItem = GetItemByKey("ionicspark")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("tearofthegoddess"),
+                    ResultItem = GetItemByKey("frozenheart")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("chainvest"),
+                    ResultItem = GetItemByKey("thornmail")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("negatroncloak"),
+                    ResultItem = GetItemByKey("swordbreaker")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("giantsbelt"),
+                    ResultItem = GetItemByKey("redbuff")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("spatula"),
+                    ResultItem = GetItemByKey("knightsvow")
+                }
+            };
+
+            GetItemByKey("needlesslylargerod").Recipes = new List<Recipe>()
+            {
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("bfsword"),
                     ResultItem = GetItemByKey("hextechgunblade")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("recurvebow"),
+                    ResultItem = GetItemByKey("guinsoosrageblade")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("needlesslylargerod"),
+                    ResultItem = GetItemByKey("rabadonsdeathcap")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("tearofthegoddess"),
+                    ResultItem = GetItemByKey("ludensecho")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("chainvest"),
+                    ResultItem = GetItemByKey("locketoftheironsolari")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("negatroncloak"),
+                    ResultItem = GetItemByKey("ionicspark")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("giantsbelt"),
+                    ResultItem = GetItemByKey("morellonomicon")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("spatula"),
+                    ResultItem = GetItemByKey("yuumi")
+                }
+            };
+
+            GetItemByKey("tearofthegoddess").Recipes = new List<Recipe>()
+            {
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("bfsword"),
+                    ResultItem = GetItemByKey("spearofshojin")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("recurvebow"),
+                    ResultItem = GetItemByKey("statikkshiv")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("needlesslylargerod"),
+                    ResultItem = GetItemByKey("ludensecho")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("tearofthegoddess"),
+                    ResultItem = GetItemByKey("seraphsembrace")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("chainvest"),
+                    ResultItem = GetItemByKey("frozenheart")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("negatroncloak"),
+                    ResultItem = GetItemByKey("hush")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("giantsbelt"),
+                    ResultItem = GetItemByKey("redemption")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("spatula"),
+                    ResultItem = GetItemByKey("darkin")
+                }
+            };
+
+            GetItemByKey("giantsbelt").Recipes = new List<Recipe>()
+            {
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("bfsword"),
+                    ResultItem = GetItemByKey("zekesherald")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("recurvebow"),
+                    ResultItem = GetItemByKey("titanichydra")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("needlesslylargerod"),
+                    ResultItem = GetItemByKey("morellonomicon")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("tearofthegoddess"),
+                    ResultItem = GetItemByKey("redemption")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("chainvest"),
+                    ResultItem = GetItemByKey("redbuff")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("negatroncloak"),
+                    ResultItem = GetItemByKey("zephyr")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("giantsbelt"),
+                    ResultItem = GetItemByKey("warmogsarmor")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("spatula"),
+                    ResultItem = GetItemByKey("frozenmallet")
                 }
             };
 
             GetItemByKey("spatula").Recipes = new List<Recipe>()
             {
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("bfsword"),
+                    ResultItem = GetItemByKey("youmuusghostblade")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("recurvebow"),
+                    ResultItem = GetItemByKey("bladeoftheruinedking")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("needlesslylargerod"),
+                    ResultItem = GetItemByKey("yuumi")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("tearofthegoddess"),
+                    ResultItem = GetItemByKey("darkin")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("chainvest"),
+                    ResultItem = GetItemByKey("knightsvow")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("negatroncloak"),
+                    ResultItem = GetItemByKey("runaanshurricane")
+                },
+                new Recipe()
+                {
+                    AdditionalItem = GetItemByKey("giantsbelt"),
+                    ResultItem = GetItemByKey("frozenmallet")
+                },
                 new Recipe()
                 {
                     AdditionalItem = GetItemByKey("spatula"),

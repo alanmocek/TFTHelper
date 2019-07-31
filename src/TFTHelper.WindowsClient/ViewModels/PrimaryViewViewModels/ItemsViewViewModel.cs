@@ -38,14 +38,27 @@ namespace TFTHelper.WindowsClient.ViewModels
             Item item = (Item)x;
             if(SelectedItems.Contains(item))
             {
+                item.IsHiden = true;
                 SelectedItems.Remove(item);
             }else
             {
+                item.IsHiden = false;
                 SelectedItems.Add(item);
+            }
+
+            var newList = new List<Item>();
+
+            foreach(Item i in BasicItems)
+            {
+                newList.Add(i);
             }
 
             Items = ContainerService.ItemService.GetItemsByBasicItems(SelectedItems).ToList();
             ChangeProperty(nameof(Items));
+
+            BasicItems = newList;
+
+            ChangeProperty(nameof(BasicItems));
         }
     }
 }
